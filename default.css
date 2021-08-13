@@ -1,0 +1,465 @@
+/* defining variables in root, vars allows for reusable code*/ 
+:root{
+    --mainColor:#020c1b;
+    --secondaryColor:#0a192f;
+
+    --borderColor:#112240;
+
+    --mainText:#ccd6f6;
+    --secondaryText:#ccd6f6;
+
+    --themeDotBorder:#24292e;
+
+    --previewBg:rgba(2,12,27,0.7);
+    --previewShadow:#233554;
+    --green: #64ffda;
+    --font-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+    /* keep a color for links */
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--mainText);
+    font-family: var(--font-sans);
+    font-weight: 800;
+}
+
+p, li, span, label, input, textarea{
+    color: var(--secondaryText);
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:var(--green);
+}
+
+#name-heading{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contact-heading{
+    margin-top: 20px;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+
+
+
+h1 {font-size: 56px;}
+h2 {font-size: 36px;}
+h3 {font-size: 28px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 16px;}
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wrapper{
+    display: grid;
+    min-height: 10em;
+    text-align: center;
+    /*justify-content: center;*/
+    align-content: center;
+}
+
+
+.social-dots-wrapper{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.social-logo{
+    margin: 10px;
+}
+
+#resume-text{
+    text-align: center;
+    margin-left: 10px;
+    color: var(--green);
+}
+
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 10px 10px 0 0;
+    box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -webkit-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -moz-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'navigation-wrapper navigation-wrapper'
+        'left-column right-column'
+    ;
+
+}
+
+.dots-wrapper{
+    display: flex;
+    padding: 10px;
+
+}
+
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+
+    box-shadow: -10px 7px 26px -9px rgba(25,36,6,0.48);
+    -webkit-box-shadow: -10px 7px 26px -9px rgba(25,36,6,0.48);
+    -moz-box-shadow: -10px 7px 26px -9px rgba(25,36,6,0.48);
+
+}
+
+#dot-1{
+    background-color:#FC6058;
+}
+
+#dot-2{
+    background-color:#FEC02F;
+}
+
+#dot-3{
+    background-color:#2ACA3E;
+}
+
+
+#navigation{
+	margin:0;
+	padding: 10px;
+}
+
+
+#navigation li{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navigation-wrapper{
+    grid-area: navigation-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mainColor);
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+.left-column{
+    grid-area: left-column;
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 1px solid var(--borderColor);
+    border-radius: 50%;
+}
+
+
+
+.right-column{
+    grid-area: right-column;
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-content: center;
+}
+
+#preview-shadow{
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 200px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+#preview{
+    width: 300px;
+    height: 200px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding: 15px;
+    position: relative;
+}
+
+ul.highlights-list{
+    font-size: 22px;
+}
+
+
+
+.corner-dots{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: white;
+    position: absolute;
+
+}
+
+#top-left-corner-dot{
+    top: -5px;
+    left: -5px;
+}
+
+#top-right-corner-dot{
+    top: -5px;
+    right: -5px;
+}
+
+#bottom-left-corner-dot{
+    bottom: -5px;
+    left: -5px;
+}
+
+#bottom-right-corner-dot{
+    bottom: -5px;
+    right: -5px;
+}
+
+
+
+/* Following is the way to make your layouts responsive*/
+.experience-wrapper{
+    /* display: grid; */
+    /* Following line means fit as many columns as possible but as soon as the column width is less than 320px start stacking the columns */
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* gap: 100px */
+}
+
+
+.experience{
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+    padding:10px;
+    gap: 50px;
+    border: 1px solid var(--borderColor);
+
+    box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -webkit-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -moz-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'experience-left-column experience-right-column'
+    ; */
+} 
+
+h5.experience-heading{
+    margin-bottom: 0;
+
+}
+
+h6.experience-heading{
+    margin-bottom: 0;
+    margin-top: 10px;
+    
+}
+
+.experience-img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.experience-left-column{
+    padding: 10px;
+    grid-area: experience-left-column;
+    display:grid;
+    align-content: center;
+
+}
+
+.experience-right-column{
+    padding: 10px;
+    grid-area: experience-right-column;
+    display: grid;
+}
+
+.post-wrapper{
+    display: grid;
+    /* Following line means fit as many columns as possible but as soon as the column width is less than 320px start stacking the columns */
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.thumbnail{
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+
+#flick-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+#weather-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.post{
+    border: 1px solid var(--borderColor);
+
+    box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -webkit-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -moz-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+
+}
+
+.post-preview{
+
+    background-color: var(--mainColor);
+    padding: 15px;
+}
+
+/* we are doing the following for theme changes, don't remove it*/
+
+.post-title{
+    color: var(--mainText);
+    margin: 0;
+}
+
+.post-intro{
+    color: var(--secondaryText);
+    font-size: 14px;
+}
+
+.project-links-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+a.source-code-text{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.skills-wrapper{
+    padding-bottom: 50px;
+}
+
+.skills{
+    border: 1px solid var(--borderColor);
+
+    box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -webkit-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+    -moz-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
+
+    
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+
+    margin-left: auto;
+    margin-right: auto;
+
+    
+    
+    
+
+}
+
+ul.technical-skills-list{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 50px;
+    justify-content: space-around;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'navigation-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    
+    }
+
+    .right-column{
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 800px){
+    .experience{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'experience-left-column'
+            'experience-right-column'
+        ;
+    
+    }
+
+    .experience-right-column{
+        justify-content: center;
+    }
+
+    
+}
