@@ -22,7 +22,7 @@ html, body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h3, h4, h5, h6, strong, span {
     color: var(--mainText);
     font-family: var(--font-sans);
     font-weight: 800;
@@ -419,6 +419,12 @@ ul.technical-skills-list{
     grid-template-columns: repeat(auto-fit, 200px);
     gap: 50px;
     justify-content: space-around;
+}
+
+#copyrights {
+    text-align: center;
+    font-style: italic;
+    margin: 15px;
 }
 
 
